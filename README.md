@@ -7,7 +7,7 @@ CurrencyConverter Application for iOS
 ![stars](https://img.shields.io/github/stars/sweatpotato13/CurrencyConverter?style=plastic)
 
 
-![example](https://i.imgur.com/7D6xQYn.png)
+![example](https://i.imgur.com/R3sApLF.png)
 
 ## feature
 
