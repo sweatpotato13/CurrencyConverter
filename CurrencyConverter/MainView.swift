@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import GoogleMobileAds
 
 struct MainView: View {
     var userData: UserData = UserData()
@@ -54,6 +55,8 @@ struct MainView: View {
                         }
                 }
                 .onAppear(perform: loadCurrencies)
+                GADBannerViewController()
+                    .frame(width: kGADAdSizeBanner.size.width, height: kGADAdSizeBanner.size.height)
                 Text("Last updated: \(self.lastUpdated)").foregroundColor(.gray).bold()
             }
         }
