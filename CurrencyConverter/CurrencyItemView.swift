@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct CurrencyItemView: View {
-    var userData: UserData
+    //var userData: UserData
     let currency: Currency
     let baseAmount: Double
     @Binding var isEditing: Bool

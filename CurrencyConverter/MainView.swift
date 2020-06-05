@@ -11,7 +11,7 @@ import SwiftUI
 import GoogleMobileAds
 
 struct MainView: View {
-    var userData: UserData = UserData()
+    //var userData: UserData = UserData()
     @State var baseAmount: String = "1.0"
     @State var isEditing: Bool = false
     @State var lastUpdated: String = ""
@@ -47,10 +47,10 @@ struct MainView: View {
                 }.background(Color.blue).cornerRadius(5)
                 Text("To:").bold().foregroundColor(.gray)
                 List{
-                    ForEach(userData.allCurrencies) { currency in
-                        CurrencyItemView(userData: self.userData, currency: currency, baseAmount: doubleValue, isEditing: self.$isEditing).onTapGesture {
+                    ForEach(userData.userCurrency) { currency in
+                        CurrencyItemView( currency: currency, baseAmount: doubleValue, isEditing: self.$isEditing).onTapGesture {
                                 // Swap this and base
-                                self.userData.baseCurrency = currency
+                                userData.baseCurrency = currency
                             }
                         }
                 }
@@ -77,20 +77,20 @@ struct MainView: View {
                     }
                     
                     DispatchQueue.main.async {
-                        self.userData.allCurrencies = newCurrencies
-                        if let base = self.userData.allCurrencies.filter({ $0.symbol == self.userData.baseCurrency.symbol }).first {
-                            self.userData.baseCurrency = base
+                        userData.allCurrencies  = newCurrencies
+                        if let base = userData.allCurrencies.filter({ $0.symbol == userData.baseCurrency.symbol }).first {
+                            userData.baseCurrency = base
                         }
                         
                         var tempNewUserCurrency = [Currency]()
-                        let userCurrencies = self.userData.userCurrency.map{ $0.code }
-                        for c in self.userData.allCurrencies {
+                        let userCurrencies = userData.userCurrency.map{ $0.code }
+                        for c in userData.allCurrencies {
                             if userCurrencies.contains(c.code){
                                 tempNewUserCurrency.append(c)
                             }
                         }
                         
-                        self.userData.userCurrency = tempNewUserCurrency
+                        userData.userCurrency = tempNewUserCurrency
                     }
                 }
             }
