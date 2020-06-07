@@ -40,7 +40,7 @@ struct CurrencyItemView: View {
                 .background(RoundedRectangle(cornerRadius: 25).fill(Color.white))
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.purple, lineWidth: 5)
+                        .stroke(Color.blue, lineWidth: 5)
                 )
             }
             else {

@@ -33,15 +33,15 @@ struct MainView: View {
                     Text("\(ud.baseCurrency.flag)").padding(5)
                     // Code and name
                     VStack(alignment: .leading){
-                        Text(ud.baseCurrency.code).foregroundColor(.white)
-                        Text(ud.baseCurrency.name).font(.footnote).foregroundColor(.white)
+                        Text(ud.baseCurrency.code).foregroundColor(.black)
+                        Text(ud.baseCurrency.name).font(.footnote).foregroundColor(.gray)
                     }
                     Spacer()
                         .padding()
                     // Amount and conversion
                     TextField("1.0", text: $baseAmount)
                         .keyboardType(.numberPad)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .background(
                             RoundedRectangle(cornerRadius: 5)
                                 .fill(Color.clear)
@@ -49,7 +49,7 @@ struct MainView: View {
                                 .cornerRadius(5)
                                 .padding(inset)
                     )
-                }.background(Color.blue).cornerRadius(5)
+                }.background(RoundedRectangle(cornerRadius: 5).fill(Color.white))
                 Text("To:").bold().foregroundColor(.gray)
                 List{
                     ForEach(ud.userCurrency) { currency in
