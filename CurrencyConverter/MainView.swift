@@ -15,7 +15,8 @@ struct MainView: View {
     @State var baseAmount: String = "1.0"
     @State var isEditing: Bool = false
     @State var lastUpdated: String = ""
-    
+    @State var isModalSheetShown: Bool = false
+
     init() {
         UITableView.appearance().tableFooterView = UIView()
         UITableView.appearance().separatorStyle = .none
@@ -35,6 +36,10 @@ struct MainView: View {
                     VStack(alignment: .leading){
                         Text(ud.baseCurrency.code).foregroundColor(.black)
                         Text(ud.baseCurrency.name).font(.footnote).foregroundColor(.gray)
+                    }.onTapGesture {
+                        self.isModalSheetShown = true
+                    }.sheet(isPresented: self.$isModalSheetShown) {
+                        ChangeBaseCurrencyView()
                     }
                     Spacer()
                         .padding()
@@ -49,14 +54,12 @@ struct MainView: View {
                                 .cornerRadius(5)
                                 .padding(inset)
                     )
-                }.background(RoundedRectangle(cornerRadius: 5).fill(Color.white))
+                }
+                .background(RoundedRectangle(cornerRadius: 5).fill(Color.white))
                 Text("To:").bold().foregroundColor(.gray)
                 List{
                     ForEach(ud.userCurrency) { currency in
-                        CurrencyItemView( currency: currency, baseAmount: doubleValue, isEditing: self.$isEditing).onTapGesture {
-                                // Swap this and base
-                            self.ud.baseCurrency = currency
-                            }
+                        CurrencyItemView( currency: currency, baseAmount: doubleValue, isEditing: self.$isEditing)
                         }
                 }
                 .onAppear(perform: loadCurrencies)
