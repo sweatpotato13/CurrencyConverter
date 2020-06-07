@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             MainView()
-                .navigationBarTitle("Tutorials")
+                .navigationBarTitle("Currency")
                 .navigationBarItems(trailing:
                     Button(action: {
                         self.isModalSheetShown = true

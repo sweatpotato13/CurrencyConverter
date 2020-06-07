@@ -16,6 +16,11 @@ struct MainView: View {
     @State var isEditing: Bool = false
     @State var lastUpdated: String = ""
     
+    init() {
+        UITableView.appearance().tableFooterView = UIView()
+        UITableView.appearance().separatorStyle = .none
+    }
+
     var body: some View {
         let inset = EdgeInsets(top: -8, leading: -20, bottom: -7, trailing: 5)
         let doubleValue: Double = Double(self.$baseAmount.wrappedValue) ?? 1.0
@@ -29,7 +34,7 @@ struct MainView: View {
                     // Code and name
                     VStack(alignment: .leading){
                         Text(ud.baseCurrency.code).foregroundColor(.white)
-                        Text(ud.baseCurrency.name).foregroundColor(.white)
+                        Text(ud.baseCurrency.name).font(.footnote).foregroundColor(.white)
                     }
                     Spacer()
                         .padding()

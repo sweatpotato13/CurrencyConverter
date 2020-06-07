@@ -23,6 +23,7 @@ struct CurrencyItemView: View {
         return HStack {
             if self.isEditing {
                 // This is for delete mode
+                // TODO : Make this
                 HStack(alignment: .center){
                     Image(systemName: "minus.circle")
                         .foregroundColor(.red)
@@ -35,7 +36,12 @@ struct CurrencyItemView: View {
                         Text(currency.code)
                         Text(currency.name).foregroundColor(.gray)
                     }
-                }
+                }.padding()
+                .background(RoundedRectangle(cornerRadius: 25).fill(Color.white))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.purple, lineWidth: 5)
+                )
             }
             else {
                 // This is normal mode
@@ -52,9 +58,14 @@ struct CurrencyItemView: View {
                     VStack(alignment: .trailing){
                         Text("\(totalAmount)")
                         // Would be 1 this currency = xxx base currency
-                        Text("1 \(currency.code) = \(converstionRate) \(userData.baseCurrency.code)").foregroundColor(.gray)
+                        Text("1 \(currency.code) = \(converstionRate) \(userData.baseCurrency.code)").font(.footnote).foregroundColor(.gray)
                     }
-                }
+                }.padding()
+                .background(RoundedRectangle(cornerRadius: 25).fill(Color.white))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.blue, lineWidth: 5)
+                )
             }
         }
     }
