@@ -11,7 +11,7 @@ import SwiftUI
 import GoogleMobileAds
 
 struct MainView: View {
-    //var userData: UserData = UserData()
+    @ObservedObject var ud: UserData = UserData()
     @State var baseAmount: String = "1.0"
     @State var isEditing: Bool = false
     @State var lastUpdated: String = ""
@@ -25,11 +25,11 @@ struct MainView: View {
                 Text("From:").bold().foregroundColor(.gray)
                 HStack{
                     // Flag
-                    Text("\(userData.baseCurrency.flag)").padding(5)
+                    Text("\(ud.baseCurrency.flag)").padding(5)
                     // Code and name
                     VStack(alignment: .leading){
-                        Text(userData.baseCurrency.code).foregroundColor(.white)
-                        Text(userData.baseCurrency.name).foregroundColor(.white)
+                        Text(ud.baseCurrency.code).foregroundColor(.white)
+                        Text(ud.baseCurrency.name).foregroundColor(.white)
                     }
                     Spacer()
                         .padding()
@@ -47,10 +47,10 @@ struct MainView: View {
                 }.background(Color.blue).cornerRadius(5)
                 Text("To:").bold().foregroundColor(.gray)
                 List{
-                    ForEach(userData.userCurrency) { currency in
+                    ForEach(ud.userCurrency) { currency in
                         CurrencyItemView( currency: currency, baseAmount: doubleValue, isEditing: self.$isEditing).onTapGesture {
                                 // Swap this and base
-                                userData.baseCurrency = currency
+                            self.ud.baseCurrency = currency
                             }
                         }
                 }
