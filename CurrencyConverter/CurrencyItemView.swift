@@ -10,15 +10,15 @@ import Foundation
 import SwiftUI
 
 struct CurrencyItemView: View {
-    //var userData: UserData
+    @ObservedObject var ud: UserData = UserData()
     let currency: Currency
     let baseAmount: Double
     @Binding var isEditing: Bool
     
     var body: some View {
         let currency = self.currency
-        let converstionRate = String(format: "%.4f", currency.rate / userData.baseCurrency.rate)
-        let totalAmount = String(format: "%.3f", baseAmount * ( userData.baseCurrency.rate / currency.rate))
+        let converstionRate = String(format: "%.4f", currency.rate / ud.baseCurrency.rate)
+        let totalAmount = String(format: "%.3f", baseAmount * ( ud.baseCurrency.rate / currency.rate))
 
         return HStack {
             if self.isEditing {
