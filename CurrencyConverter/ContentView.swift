@@ -11,7 +11,7 @@ var userData: UserData = UserData()
 
 struct ContentView: View {
     @State var isModalSheetShown: Bool = false
-    
+
     var body: some View {
         NavigationView {
             MainView()

@@ -11,17 +11,22 @@ import SwiftUI
 
 struct ModalView: View {
     @ObservedObject var ud: UserData = UserData()
+    @State var counter = 1
 
     var body: some View {
         List {
             ForEach(ud.allCurrencies) { currency in
                 return HStack {
-                    Button(action: { self.select(currency) }) {
+                    Button(action: { self.select(currency)
+                        self.counter += 1
+                    }) {
                         Text("\(currency.code) - \(currency.name)")
                     }
                     Spacer()
-                    if self.isSelected(currency) {
-                        Image(systemName: "checkmark").foregroundColor(.blue)
+                    if self.counter >= 1{
+                        if self.isSelected(currency) {
+                            Image(systemName: "checkmark").foregroundColor(.blue)
+                        }
                     }
                 }
             }
