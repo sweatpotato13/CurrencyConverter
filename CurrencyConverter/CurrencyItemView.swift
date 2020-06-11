@@ -51,12 +51,13 @@ struct CurrencyItemView: View {
                     // Code and name
                     VStack(alignment: .leading){
                         Text(currency.code).font(.headline)
+                            .foregroundColor(.black)
                         Text(currency.name).font(.footnote).foregroundColor(.gray)
                     }
                     Spacer()
                     // Amount and conversion
                     VStack(alignment: .trailing){
-                        Text("\(totalAmount)")
+                        Text("\(totalAmount)").foregroundColor(.black)
                         // Would be 1 this currency = xxx base currency
                         Text("1 \(currency.code) = \(converstionRate) \(userData.baseCurrency.code)").font(.footnote).foregroundColor(.gray)
                     }

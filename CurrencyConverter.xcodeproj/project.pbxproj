@@ -16,6 +16,10 @@
 		E256CF92248880880026D86C /* CurrencyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CF91248880880026D86C /* CurrencyItemView.swift */; };
 		E256CF9424888A900026D86C /* GADBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CF9324888A900026D86C /* GADBannerViewController.swift */; };
 		E256CFA8248DB5760026D86C /* ChangeBaseCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CFA7248DB5760026D86C /* ChangeBaseCurrencyView.swift */; };
+		E256CFAF2491BE9D0026D86C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E256CFAE2491BE9D0026D86C /* NotificationCenter.framework */; };
+		E256CFB22491BE9D0026D86C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CFB12491BE9D0026D86C /* TodayViewController.swift */; };
+		E256CFB52491BE9D0026D86C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E256CFB32491BE9D0026D86C /* MainInterface.storyboard */; };
+		E256CFB92491BE9D0026D86C /* CurrencyConverterWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E256CFAD2491BE9D0026D86C /* CurrencyConverterWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2F86D4524876B0100BB5636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F86D4424876B0100BB5636 /* AppDelegate.swift */; };
 		E2F86D4724876B0100BB5636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F86D4624876B0100BB5636 /* SceneDelegate.swift */; };
 		E2F86D4924876B0100BB5636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F86D4824876B0100BB5636 /* ContentView.swift */; };
@@ -29,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E256CFB72491BE9D0026D86C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2F86D3924876B0100BB5636 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E256CFAC2491BE9D0026D86C;
+			remoteInfo = CurrencyConverterWidget;
+		};
 		E2F86D5824876B0200BB5636 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E2F86D3924876B0100BB5636 /* Project object */;
@@ -44,6 +55,20 @@
 			remoteInfo = CurrencyConverter;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E256CFBD2491BE9D0026D86C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E256CFB92491BE9D0026D86C /* CurrencyConverterWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B2D75E83B210D3BBF18AEC6 /* Pods_CurrencyConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +86,11 @@
 		E256CF9324888A900026D86C /* GADBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADBannerViewController.swift; sourceTree = "<group>"; };
 		E256CFA524888CCD0026D86C /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		E256CFA7248DB5760026D86C /* ChangeBaseCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeBaseCurrencyView.swift; sourceTree = "<group>"; };
+		E256CFAD2491BE9D0026D86C /* CurrencyConverterWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CurrencyConverterWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E256CFAE2491BE9D0026D86C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E256CFB12491BE9D0026D86C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E256CFB42491BE9D0026D86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E256CFB62491BE9D0026D86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F86D4124876B0100BB5636 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F86D4424876B0100BB5636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2F86D4624876B0100BB5636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +111,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E256CFAA2491BE9D0026D86C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E256CFAF2491BE9D0026D86C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2F86D3E24876B0100BB5636 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,8 +166,19 @@
 				1B2D75E83B210D3BBF18AEC6 /* Pods_CurrencyConverter.framework */,
 				87FC4F65FBE5AB51FD9181C9 /* Pods_CurrencyConverter_CurrencyConverterUITests.framework */,
 				84D98D43FAFCF228796A6F06 /* Pods_CurrencyConverterTests.framework */,
+				E256CFAE2491BE9D0026D86C /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E256CFB02491BE9D0026D86C /* CurrencyConverterWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E256CFB12491BE9D0026D86C /* TodayViewController.swift */,
+				E256CFB32491BE9D0026D86C /* MainInterface.storyboard */,
+				E256CFB62491BE9D0026D86C /* Info.plist */,
+			);
+			path = CurrencyConverterWidget;
 			sourceTree = "<group>";
 		};
 		E2F86D3824876B0100BB5636 = {
@@ -138,6 +187,7 @@
 				E2F86D4324876B0100BB5636 /* CurrencyConverter */,
 				E2F86D5A24876B0200BB5636 /* CurrencyConverterTests */,
 				E2F86D6524876B0200BB5636 /* CurrencyConverterUITests */,
+				E256CFB02491BE9D0026D86C /* CurrencyConverterWidget */,
 				E2F86D4224876B0100BB5636 /* Products */,
 				E256CFA424888CCD0026D86C /* Frameworks */,
 				ADBBC78F14BB6B8D20194D5F /* Pods */,
@@ -150,6 +200,7 @@
 				E2F86D4124876B0100BB5636 /* CurrencyConverter.app */,
 				E2F86D5724876B0200BB5636 /* CurrencyConverterTests.xctest */,
 				E2F86D6224876B0200BB5636 /* CurrencyConverterUITests.xctest */,
+				E256CFAD2491BE9D0026D86C /* CurrencyConverterWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +256,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E256CFAC2491BE9D0026D86C /* CurrencyConverterWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E256CFBA2491BE9D0026D86C /* Build configuration list for PBXNativeTarget "CurrencyConverterWidget" */;
+			buildPhases = (
+				E256CFA92491BE9D0026D86C /* Sources */,
+				E256CFAA2491BE9D0026D86C /* Frameworks */,
+				E256CFAB2491BE9D0026D86C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CurrencyConverterWidget;
+			productName = CurrencyConverterWidget;
+			productReference = E256CFAD2491BE9D0026D86C /* CurrencyConverterWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E2F86D4024876B0100BB5636 /* CurrencyConverter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2F86D6B24876B0200BB5636 /* Build configuration list for PBXNativeTarget "CurrencyConverter" */;
@@ -214,10 +282,12 @@
 				E2F86D3E24876B0100BB5636 /* Frameworks */,
 				E2F86D3F24876B0100BB5636 /* Resources */,
 				F115DC3858A9892C1BCF0763 /* [CP] Embed Pods Frameworks */,
+				E256CFBD2491BE9D0026D86C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E256CFB82491BE9D0026D86C /* PBXTargetDependency */,
 			);
 			name = CurrencyConverter;
 			productName = CurrencyConverter;
@@ -273,6 +343,9 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = BTU;
 				TargetAttributes = {
+					E256CFAC2491BE9D0026D86C = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					E2F86D4024876B0100BB5636 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -302,11 +375,20 @@
 				E2F86D4024876B0100BB5636 /* CurrencyConverter */,
 				E2F86D5624876B0200BB5636 /* CurrencyConverterTests */,
 				E2F86D6124876B0200BB5636 /* CurrencyConverterUITests */,
+				E256CFAC2491BE9D0026D86C /* CurrencyConverterWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E256CFAB2491BE9D0026D86C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E256CFB52491BE9D0026D86C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2F86D3F24876B0100BB5636 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,6 +519,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E256CFA92491BE9D0026D86C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E256CFB22491BE9D0026D86C /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2F86D3D24876B0100BB5636 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +564,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E256CFB82491BE9D0026D86C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E256CFAC2491BE9D0026D86C /* CurrencyConverterWidget */;
+			targetProxy = E256CFB72491BE9D0026D86C /* PBXContainerItemProxy */;
+		};
 		E2F86D5924876B0200BB5636 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E2F86D4024876B0100BB5636 /* CurrencyConverter */;
@@ -487,6 +582,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E256CFB32491BE9D0026D86C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E256CFB42491BE9D0026D86C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		E2F86D4F24876B0200BB5636 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -498,6 +601,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E256CFBB2491BE9D0026D86C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZ7NYDGX6V;
+				INFOPLIST_FILE = CurrencyConverterWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BTU.CurrencyConverter.CurrencyConverterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E256CFBC2491BE9D0026D86C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZ7NYDGX6V;
+				INFOPLIST_FILE = CurrencyConverterWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BTU.CurrencyConverter.CurrencyConverterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E2F86D6924876B0200BB5636 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -616,6 +757,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC41CBF86D977AA7CF585B62 /* Pods-CurrencyConverter.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CurrencyConverter/Preview Content\"";
@@ -642,6 +784,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 99DA4BAE938789BF43B62FFD /* Pods-CurrencyConverter.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CurrencyConverter/Preview Content\"";
@@ -755,6 +898,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E256CFBA2491BE9D0026D86C /* Build configuration list for PBXNativeTarget "CurrencyConverterWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E256CFBB2491BE9D0026D86C /* Debug */,
+				E256CFBC2491BE9D0026D86C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E2F86D3C24876B0100BB5636 /* Build configuration list for PBXProject "CurrencyConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
