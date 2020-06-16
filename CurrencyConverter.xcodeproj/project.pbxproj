@@ -11,7 +11,10 @@
 		6DCCE855765407DFB607BB4F /* Pods_CurrencyConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D75E83B210D3BBF18AEC6 /* Pods_CurrencyConverter.framework */; };
 		82550ED775ED0A6E2701F611 /* Pods_CurrencyConverterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D98D43FAFCF228796A6F06 /* Pods_CurrencyConverterTests.framework */; };
 		E23CA51B249845060021C6A0 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CA51A249845060021C6A0 /* WidgetView.swift */; };
-		E23CA51E249848880021C6A0 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CA51A249845060021C6A0 /* WidgetView.swift */; };
+		E23CA52024984D4E0021C6A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F86D4A24876B0200BB5636 /* Assets.xcassets */; };
+		E23CA52224984EF60021C6A0 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CA51A249845060021C6A0 /* WidgetView.swift */; };
+		E23CA52324984EFD0021C6A0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CFB12491BE9D0026D86C /* TodayViewController.swift */; };
+		E23CA52424984F000021C6A0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E256CFB32491BE9D0026D86C /* MainInterface.storyboard */; };
 		E256CF8A248879A80026D86C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CF89248879A80026D86C /* Currency.swift */; };
 		E256CF8E24887AC60026D86C /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CF8D24887AC60026D86C /* CurrencyList.swift */; };
 		E256CF9024887BCF0026D86C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256CF8F24887BCF0026D86C /* UserData.swift */; };
@@ -82,6 +85,7 @@
 		9AECF1DD3DDA63CCA92D9304 /* Pods-CurrencyConverter-CurrencyConverterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverter-CurrencyConverterUITests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyConverter-CurrencyConverterUITests/Pods-CurrencyConverter-CurrencyConverterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BEF7E73DA037043A7D0E7CA2 /* Pods-CurrencyConverterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverterTests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyConverterTests/Pods-CurrencyConverterTests.release.xcconfig"; sourceTree = "<group>"; };
 		E23CA51A249845060021C6A0 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		E23CA52124984DE20021C6A0 /* CurrencyConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CurrencyConverter.entitlements; sourceTree = "<group>"; };
 		E256CF89248879A80026D86C /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		E256CF8D24887AC60026D86C /* CurrencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
 		E256CF8F24887BCF0026D86C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 		E2F86D4324876B0100BB5636 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				E23CA52124984DE20021C6A0 /* CurrencyConverter.entitlements */,
 				E2F86D4424876B0100BB5636 /* AppDelegate.swift */,
 				E2F86D4624876B0100BB5636 /* SceneDelegate.swift */,
 				E2F86D4824876B0100BB5636 /* ContentView.swift */,
@@ -389,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23CA52024984D4E0021C6A0 /* Assets.xcassets in Resources */,
 				E256CFB52491BE9D0026D86C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F86D5124876B0200BB5636 /* LaunchScreen.storyboard in Resources */,
+				E23CA52424984F000021C6A0 /* MainInterface.storyboard in Resources */,
 				E2F86D4E24876B0200BB5636 /* Preview Assets.xcassets in Resources */,
 				E2F86D4B24876B0200BB5636 /* Assets.xcassets in Resources */,
 			);
@@ -542,7 +549,8 @@
 				E256CF8E24887AC60026D86C /* CurrencyList.swift in Sources */,
 				E256CF92248880880026D86C /* CurrencyItemView.swift in Sources */,
 				E256CF9424888A900026D86C /* GADBannerViewController.swift in Sources */,
-				E23CA51E249848880021C6A0 /* WidgetView.swift in Sources */,
+				E23CA52224984EF60021C6A0 /* WidgetView.swift in Sources */,
+				E23CA52324984EFD0021C6A0 /* TodayViewController.swift in Sources */,
 				E2F86D4724876B0100BB5636 /* SceneDelegate.swift in Sources */,
 				E2F86D7524876D4000BB5636 /* ModalView.swift in Sources */,
 				E256CFA8248DB5760026D86C /* ChangeBaseCurrencyView.swift in Sources */,
@@ -765,6 +773,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CurrencyConverter/CurrencyConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CurrencyConverter/Preview Content\"";
 				DEVELOPMENT_TEAM = AZ7NYDGX6V;
@@ -792,6 +801,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CurrencyConverter/CurrencyConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CurrencyConverter/Preview Content\"";
 				DEVELOPMENT_TEAM = AZ7NYDGX6V;
