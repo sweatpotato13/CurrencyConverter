@@ -13,9 +13,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
         // Do any additional setup after loading the view.
     }
 
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        if activeDisplayMode == NCWidgetDisplayMode.compact {
+            //compact
+            self.preferredContentSize = maxSize
+        } else {
+            //extended
+            self.preferredContentSize = CGSize(width: 0, height: 200)
+        }
+    }
 
     @IBSegueAction func addSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         let hostingController = UIHostingController(coder: coder, rootView: WidgetView())

@@ -59,7 +59,7 @@ struct CurrencyItemView: View {
                     VStack(alignment: .trailing){
                         Text("\(totalAmount)").foregroundColor(.black)
                         // Would be 1 this currency = xxx base currency
-                        Text("1 \(currency.code) = \(converstionRate) \(userData.baseCurrency.code)").font(.footnote).foregroundColor(.gray)
+                        Text("1 \(currency.code) = \(converstionRate) \(ud.baseCurrency.code)").font(.footnote).foregroundColor(.gray)
                     }
                 }.padding()
                 .background(RoundedRectangle(cornerRadius: 25).fill(Color.white))
