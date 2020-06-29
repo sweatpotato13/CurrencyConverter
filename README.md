@@ -7,16 +7,19 @@ CurrencyConverter Application for iOS
 ![stars](https://img.shields.io/github/stars/sweatpotato13/CurrencyConverter?style=plastic)
 
 
-![example](https://i.imgur.com/R3sApLF.png)
+![example](https://i.imgur.com/mVL06WD.png)
 
 ## feature
 
-* UNDER DEVELOPING
+* Get CurrencyRate from API
+* Set Base Currency
+* Add/Del Currency List
+* Widget
 
 ## Prerequisites
 
 ```
-UNDER DEVELOPING
+iOS 13
 ```
 
 ## Built With
