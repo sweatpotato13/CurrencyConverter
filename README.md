@@ -16,6 +16,9 @@ CurrencyConverter Application for iOS
 * Add/Del Currency List
 * Widget
 
+## need to update
+* Application for Apple Watch
+
 ## Prerequisites
 
 ```
